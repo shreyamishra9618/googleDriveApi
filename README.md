@@ -59,7 +59,20 @@ Install the dependencies by running npm install.
 Set the client ID and client secret in the code.
 Start the server by running npm start.
 
-## Usage
+## Usage & Detailed Explanation
+This is a program that uses the Google Drive API to do things like list files, download files, and list users who have access to a file. Here's a step-by-step explanation:
+
+1. The program starts by importing some libraries that it needs to run, like 'googleapis', 'http', 'url', 'dotenv', and 'fs'.
+2. Then, it loads some environment variables from a file called ".env" using the 'dotenv' library.
+3. It sets up a 'PORT' variable to 8080.
+4. It creates a new 'OAuth2' object from the 'google.auth' library, which will handle the authentication with the Google Drive API.
+5. Next, it creates a 'drive' object using the 'google.drive' library, which will allow the program to interact with the Google Drive API.
+6. Then, it sets up a server using the 'http' library that will handle OAuth2 callbacks. This is necessary because the Google Drive API requires the user to log in and authorize the program to access their files.
+7. The program defines some functions that will interact with the Google Drive API, like 'listFiles()', 'downloadFile()', 'listUsers()', and 'watchFile()'. These functions perform tasks like listing files in the user's Drive account, downloading a file by its ID, listing users who have access to a file, and setting up real-time notifications using Push Notifications.
+8. The program starts the server and opens the OAuth2 login page in the user's default browser using the 'open' library. This will allow the user to log in and authorize the program to access their files.
+9. Finally, the program exports the functions for use in other modules.
+
+
 This example includes three functions:
 
 listFiles(): Lists all files in the user's Drive account.
