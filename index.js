@@ -1,11 +1,14 @@
 const { google } = require('googleapis');
 const http = require('http');
 const url = require('url');
-const open = require('open');
+(async () => {
+    const open = await import('open');
+    await open('https://www.google.com');
+  })();
 const PORT = 3000;
 const auth = new google.auth.OAuth2(
-    'YOUR_CLIENT_ID',
-    'YOUR_CLIENT_SECRET',
+    '191904307749-0qg530be430jt6fu0qe3edp44ra646i8.apps.googleusercontent.com',
+    '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',
     `http://localhost:${PORT}/auth/google/callback`
 );
 const drive = google.drive({ version: 'v3', auth });
