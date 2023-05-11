@@ -19,7 +19,7 @@ Build an app (preferably in Javascript/NodeJS) where you connect to Google Drive
 * It should also be real time where if new users are added to the file, in real time, you get an  event and you display the new users. Similarly, if users are removed from the file.
 
 ## Prerequisites
-To use this app, you will need:
+To use this app, you will need:\
 A Google account\
 Node.js installed on your machine\
 A client ID and client secret for the Google Drive API, which can be obtained by creating a new project in the Google Developers Console and enabling the Drive API.
