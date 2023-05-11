@@ -9,10 +9,10 @@ dotenv.config();
 
 const PORT = 3003;
 const auth = new google.auth.OAuth2({
-//   client_id: process.env.YOUR_CLIENT_ID,
-client_id:'191904307749-0qg530be430jt6fu0qe3edp44ra646i8.apps.googleusercontent.com',
-//   client_secret: process.env.YOUR_CLIENT_SECRET,
-client_secret:'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',
+  client_id: process.env.YOUR_CLIENT_ID,
+
+  client_secret: process.env.YOUR_CLIENT_SECRET,
+
   redirect_uri: `http://localhost:${PORT}/auth/google/callback`
 });
 
