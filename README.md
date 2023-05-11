@@ -20,8 +20,8 @@ Build an app (preferably in Javascript/NodeJS) where you connect to Google Drive
 
 ## Prerequisites
 To use this app, you will need:
-A Google account
-Node.js installed on your machine
+A Google account\
+Node.js installed on your machine\
 A client ID and client secret for the Google Drive API, which can be obtained by creating a new project in the Google Developers Console and enabling the Drive API.
 
 
