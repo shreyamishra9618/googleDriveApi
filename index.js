@@ -7,15 +7,17 @@ const fs = require('fs');
 // Load environment variables from .env file
 dotenv.config();
 
-const PORT = 3003;
+const PORT = 8080;
 const auth = new google.auth.OAuth2({
-  client_id: process.env.YOUR_CLIENT_ID,
+  client_id:process.env.YOUR_CLIENT_ID,
 
   client_secret: process.env.YOUR_CLIENT_SECRET,
 
-  redirect_uri: `http://localhost:${PORT}/auth/google/callback`
-});
 
+  redirect_uri: `http://localhost:${PORT}/auth/google/callback`
+//   redirect_uri: `https://developers.google.com/oauthplayground`
+});
+// console.log("Hi starting the program")
 const drive = google.drive({
   version: 'v3',
   auth: auth,
@@ -110,6 +112,6 @@ server.listen(PORT, async () => {
 module.exports = {
     listFiles: listFiles,
     downloadFile: downloadFile,
-    listUsers: listUsers,
-    watchFile: watchFile,
+    listUsers: listUsers
+    // watchFile: watchFile,
 };
